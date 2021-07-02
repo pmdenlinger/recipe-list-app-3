@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Recipe: Decodable {
+class Recipe: Identifiable, Decodable {
     
     var id: UUID?
     var name: String

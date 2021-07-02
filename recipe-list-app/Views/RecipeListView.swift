@@ -12,8 +12,14 @@ struct RecipeListView: View {
     @ObservedObject var model = RecipeModel()
     
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        List(model.recipes) { r in
+            
+            HStack {
+                Image(r.image)
+                Text(r.name)
+            }
+            
+        }
     }
 }
 
